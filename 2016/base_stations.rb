@@ -1,6 +1,9 @@
 require_relative 'base_station.rb'
 
 class BaseStations
+
+  attr_reader :base_stations
+
   def initialize
     @base_stations = []
   end
