@@ -1,0 +1,5 @@
+21
+Alpha 10 10
+Beta 4 10
+Gamma 10 16
+Epsilon 16 10
