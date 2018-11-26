@@ -2,4 +2,5 @@
 Alpha 10 10
 Beta 4 10
 Gamma 10 16
+Delta 10 4
 Epsilon 16 10

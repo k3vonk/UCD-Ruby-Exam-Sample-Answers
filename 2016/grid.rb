@@ -1,3 +1,5 @@
+require_relative 'cell.rb'
+
 class Grid
   def initialize (size)
     @size = size

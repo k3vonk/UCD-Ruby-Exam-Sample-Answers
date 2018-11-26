@@ -5,6 +5,6 @@ class BaseStation
   end
 
   def to_s
-
+    "#{@name}#{@cell} "
   end
 end

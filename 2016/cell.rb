@@ -6,6 +6,6 @@ class Cell
   end
 
   def to_s
-
+    "(#{@x}, #{@y})"
   end
 end
