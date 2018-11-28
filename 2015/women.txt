@@ -1,0 +1,5 @@
+Michelle 8 8
+Lucy 7 9
+Patricia 10 4
+Alice 6 3
+Mary 5 5
