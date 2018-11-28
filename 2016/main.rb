@@ -19,6 +19,3 @@ puts base_stations.to_s
 grid.cell_of_base_stations(base_stations.base_stations)
 grid.coverage_everything
 puts grid.converge_to_s
-
-
-

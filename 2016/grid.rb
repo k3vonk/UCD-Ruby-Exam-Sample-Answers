@@ -19,20 +19,19 @@ class Grid
     @medium_coverage_cells = []
     @strong_coverage_cells = []
 
-    (@size - 1).times do |i|
-      (@size - 1).times do |j|
-        hold = Cell.new(i, j).distance(@base_stations_cells[0])
-        best_cov = 0
-        @base_stations_cells.length.times do |station|
-          temp = Cell.new(i, j).distance(@base_stations_cells[station])
+    (@size).times do |i|
+      (@size).times do |j|
+        hold = @lower_left_cell.distance(@upper_right_cell)
+        @base_stations_cells.each do |station|
+          temp = Cell.new(i, j).distance(station)
          if temp < hold
-           best_cov = Cell.new(i, j).coverage(@base_stations_cells[station])
+           hold = temp
          end
         end
-
-        if best_cov <= 0.1
+        hold = Cell.new(i,j).coverage(hold)
+        if hold <= 0.1
           @weak_coverage_cells << Cell.new(i,j)
-        elsif best_cov <= 0.3 && best_cov > 0.1
+        elsif hold <= 0.3 && hold > 0.1
           @medium_coverage_cells << Cell.new(i,j)
         else
           @strong_coverage_cells << Cell.new(i,j)

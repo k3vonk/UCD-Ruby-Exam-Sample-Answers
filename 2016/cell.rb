@@ -5,8 +5,8 @@ class Cell
     @y = y
   end
 
-  def coverage (cell)
-    1/(1 + distance(cell))
+  def coverage (dist)
+    1/(1 + dist)
   end
 
   def distance (cell)
