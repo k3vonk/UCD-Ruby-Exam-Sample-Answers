@@ -1,4 +1,8 @@
 class Bank
+
+  attr_reader :accounts
+  include Enumerable
+
   def initialize
     @accounts = {}
   end
@@ -15,7 +19,17 @@ class Bank
     @accounts[id].withdraw(amt)
   end
 
+  def each
+    @accounts.each do |id, account|
+      yield account
+    end
+  end
+
   def to_s
-    @accounts.inject("") {|str, id, account| str + account.to_s + "\n"}
+    str = ""
+    @accounts.each do |id, account|
+      str += account.to_s + "\n"
+    end
+    str
   end
 end

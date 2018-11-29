@@ -1,4 +1,7 @@
 class Account
+
+  attr_reader :balance
+
   def initialize(id, balance)
     @id = id
     @balance = balance
@@ -17,6 +20,6 @@ class Account
   end
 
   def to_s
-    "#{@id}: #{@balance}"
+    "Account #{@id} contains $#{@balance.round(2)}"
   end
 end
