@@ -13,7 +13,7 @@ class Country
   end
 
   def ranking
-    (@gold*3 + @silver*2 + @bronze) / (@population + 0.0)
+    (@gold*3 + @silver*2 + @bronze) / (@population.to_f)
   end
 
   def <=>(other)
