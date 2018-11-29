@@ -8,7 +8,7 @@ class Population
   end
 
   def population_tax_due
-    @tax_payers.inject(0.0) {|due, tax_payer| due += tax_payer.total_tax_due}
+    @tax_payers.inject(0.0) {|due, tax_payer| due + tax_payer.total_tax_due}
   end
 
   def population_percentage_not_paying
