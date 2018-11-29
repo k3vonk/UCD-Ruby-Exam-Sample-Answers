@@ -1,4 +1,7 @@
 class Teller
+
+  attr_reader :total_minutes
+
   def initialize(name, no_minutes)
     @name = name
     @no_minutes = no_minutes

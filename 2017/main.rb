@@ -63,6 +63,6 @@ bank3.add_teller(Teller.new("Jack", 1))
 bank3.add_teller(Teller.new("Emma", 2))
 bank3.add_teller(Teller.new("Paul", 3))
 
-bank3.process_transactions_randomly(transactions)
+bank3.process_transactions_smartly(transactions)
 puts bank3.teller_to_s
 

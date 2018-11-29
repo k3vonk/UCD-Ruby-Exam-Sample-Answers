@@ -34,6 +34,12 @@ class Bank
     transactions.each {|transaction| @tellers[rand(@tellers.length)].single_transaction(self, transaction)}
   end
 
+  def process_transactions_smartly(transactions)
+    transactions.each do |transaction|
+      
+    end
+  end
+
   def teller_to_s
     @tellers.inject(""){|str, teller| str += teller.to_s + "\n"}
   end
