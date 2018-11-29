@@ -1,6 +1,7 @@
 require_relative 'bank.rb'
 require_relative 'account.rb'
 require_relative 'transactions.rb'
+require_relative 'teller.rb'
 
 
 ############## PART 1 ############
@@ -47,4 +48,21 @@ bank2.each{|account| total += account.balance}
 puts "average account balance in bank is: $#{(total/bank2.accounts.length).round(2)}"
 
 puts "total balance in bank is: $#{total.round(2)}"
+
+
+############# PART 3 ##############
+
+bank3 = Bank.new
+begin
+  IO.foreach('accounts.txt') do |line|
+    bank3.add_account(line.to_i)
+  end
+end
+
+bank3.add_teller(Teller.new("Jack", 1))
+bank3.add_teller(Teller.new("Emma", 2))
+bank3.add_teller(Teller.new("Paul", 3))
+
+bank3.process_transactions_randomly(transactions)
+puts bank3.teller_to_s
 

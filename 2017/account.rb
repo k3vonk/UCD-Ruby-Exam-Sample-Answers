@@ -12,11 +12,7 @@ class Account
   end
 
   def withdraw(amount)
-    if @balance < amount
-      puts "Unable to withdraw, low balance warning"
-    else
-      @balance -= amount
-    end
+    @balance -= amount
   end
 
   def to_s

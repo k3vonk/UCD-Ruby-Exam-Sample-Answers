@@ -8,7 +8,7 @@ class Transactions
     if @amt > 0
       bank.deposit(@id,@amt)
     else
-      bank.deposit(@id,@amt)
+      bank.withdraw(@id,@amt.abs)
     end
   end
 end
