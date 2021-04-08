@@ -1,4 +1,5 @@
-# Ruby_SampleExam_Answers
-To learn more about Ruby, I took on a bunch of sample exam questions and tried completing the task given.
+# UCD Ruby Exam Sample Answers
+To strategically enhance my knowledge of Ruby and to familiarize the underlying exam layout;
+I challenged myself by answering past exam Ruby code challenges.
 
 Based on UCD exam papers for COMP30070.
